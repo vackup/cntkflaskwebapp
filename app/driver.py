@@ -32,9 +32,13 @@ def init():
     trainedModel = load_model('ResNet_152.model')
     trainedModel = combine([trainedModel.outputs[3].owner])
     end = t.default_timer()
-
+       
     loadTimeMsg = "Model loading time: {0} ms".format(round((end-start)*1000, 2))
     logger.info(loadTimeMsg)
+
+    #print(trainedModel)
+    #print(loadTimeMsg)
+    return (loadTimeMsg)
 
     
 def run(inputString):

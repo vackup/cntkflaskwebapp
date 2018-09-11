@@ -23,7 +23,7 @@ def scoreRRS():
 
 @app.route("/")
 def healthy():
-    return "Healthy"
+    return "Healthy: call /loadmodel to load model manually"
 
 
 # CNTK Version
@@ -31,6 +31,12 @@ def healthy():
 def version_request():
     return cntk.__version__
 
+@app.route('/loadmodel', methods = ['GET'])
+def load_model():
+    loadTimeMsg = init()
+    return loadTimeMsg
+
 
 if __name__ == "__main__":
+    init()
     app.run(host='0.0.0.0') # Ignore, Development server
