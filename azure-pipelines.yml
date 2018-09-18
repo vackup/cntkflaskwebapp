@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/vsts/pipelines/languages/docker
 
 pool:
-  vmImage: 'tiangolo/uwsgi-nginx-flask:python3.6'
+  vmImage: 'Ubuntu 16.04'
 
 variables:
   imageName: 'cntkflaskwebapp:$(build.buildId)'
