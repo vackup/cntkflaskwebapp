@@ -11,9 +11,9 @@ variables:
 
 steps:
 - script: |
-    docker build -f Dockerfile -t $(dockerId).azurecr.io/$(imageName) .
-    docker login -u $(dockerId) -p $pswd $(dockerid).azurecr.io
-    docker push $(dockerId).azurecr.io/$(imageName)
+    docker build -f Dockerfile -t $(dockerIdAcr).azurecr.io/$(imageName) .
+    docker login -u $(dockerIdAcr) -p $pswd $(dockerIdAcr).azurecr.io
+    docker push $(dockerIdAcr).azurecr.io/$(imageName)
   env:
-    pswd: $(dockerPassword)
+    pswd: $(dockerPasswordAcr)
   displayName: 'Build and push Docker image to ARC'
