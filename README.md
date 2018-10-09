@@ -9,3 +9,5 @@ Download the model, rename it to ResNet_152.model and copy it to the app folder.
 - New verions: https://www.cntk.ai/Models/CNTK_Pretrained/ResNet152_ImageNet_CNTK.model
 
 As I'm pretty new with docker, to init the model call http://yourserver/loadmodel (i'm trying to figure out how to load it the app inits, any help is appreciated). Then you can start testing it calling the score method (POST to http://youserver/score)
+
+[![Build Status](https://hernanzaldivar.visualstudio.com/manachaiot/_apis/build/status/cntkflaskwebapp%20and%20push%20to%20Docker%20Hub)](https://hernanzaldivar.visualstudio.com/manachaiot/_build/latest?definitionId=12)
