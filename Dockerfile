@@ -1,4 +1,4 @@
-FROM hernanzaldivar/cntkflaskwebappbase
+FROM hernanzaldivar/cntkflaskwebappbase:394
 
 #debugger
 #EXPOSE 5678
